@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <html>
-<title>Spring MVC and JDBC CRUD Example</title>
+<title>Super exciting User page</title>
 
 <body>
-	<h2>Spring MVC and JDBC CRUD Example</h2>
+	<h2>View user</h2>
 	Id : ${userDetails.id}
 	<br /> First Name : ${userDetails.firstName}
 	<br /> Last Name : ${userDetails.lastName}

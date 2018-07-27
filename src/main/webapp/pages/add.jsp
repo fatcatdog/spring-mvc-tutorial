@@ -2,10 +2,10 @@
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
-<title>Spring MVC and JDBC CRUD Example</title>
+<title>adding a userrr?</title>
 
 <body>
-	<h2>Spring MVC and JDBC CRUD Example</h2>
+	<h2>Add a user mebe</h2>
 	<c:if test="${not empty msg}">
         ${msg}
     </c:if>
@@ -18,5 +18,11 @@
 			type="text" /><br /> <br /> DOB: <input name="dob" value="${dob}"
 			type="text" /><br /> <br /> <input value="Add User" type="submit" />
 	</form>
+	<p><a href="<%=request.getContextPath()%>/users">Users</a>
+&nbsp;</p>
+<p><a href="<%=request.getContextPath()%>/">Home</a>
+&nbsp;</p>
+<p><a href="<%=request.getContextPath()%>/blogs">Blogs</a>
+&nbsp;</p>
 </body>
 </html>
