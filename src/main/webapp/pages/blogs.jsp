@@ -10,34 +10,32 @@
         ${msg}
     </c:if>
 	<c:choose>
-		<c:when test="${userDetails != null}">
-			<h3>List of Users</h3>
+		<c:when test="${blog != null}">
+			<h3>List of Blogs</h3>
 			<table cellpadding="5" cellspacing="5">
 				<thead>
 					<tr>
 						<th>ID</th>
-						<th>First Name</th>
-						<th>Last Name</th>
-						<th>Email</th>
-						<th>DOB</th>
+						<th>Author ID</th>
+						<th>Blog Title</th>
+						<th>Blog Body</th>
 						<th>Actions</th>
 					</tr>
 				</thead>
 				<tbody>
-					<c:forEach var="user" items="${userDetails}">
+					<c:forEach var="blog" items="${blog}">
 						<tr>
-							<td>${user.id}</td>
-							<td>${user.firstName}</td>
-							<td>${user.lastName}</td>
-							<td>${user.email}</td>
-							<td>${user.dob}</td>
-							<td><a
+							<td>${blog.id}</td>
+							<td>${blog.authorId}</td>
+							<td>${blog.title}</td>
+							<td>${blog.body}</td>
+							<%-- <td><a
 								href="<%=request.getContextPath()%>/update/user/${user.id}">Update</a>
 								&nbsp; <a
 								href="<%=request.getContextPath()%>/delete/user/${user.id}"
 								onclick="return confirm('Do you really want to delete?')">Delete</a>
 								<a
-								href="<%=request.getContextPath()%>/user/${user.id}">View</a></td>
+								href="<%=request.getContextPath()%>/user/${user.id}">View</a></td> --%>
 						</tr>
 					</c:forEach>
 				</tbody>
@@ -47,9 +45,7 @@
 				<p><a href="<%=request.getContextPath()%>/addUser">Add User</a>
 				&nbsp;</p>
 				<p><a href="<%=request.getContextPath()%>/">Home</a>
-				&nbsp;</p>
-				<p><a href="<%=request.getContextPath()%>/blogs">Blogs</a>
-				&nbsp;</p>
+&nbsp;</p>
 		</c:when>
 		<c:otherwise>
         No User found in the DB!

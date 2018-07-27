@@ -33,8 +33,10 @@
 
 	<!-- service -->
 	<bean id="userDetailsService" class="com.jacobduchen.spring.service.impl.UserDetailsServiceImpl" />
+	<bean id="blogService" class="com.jacobduchen.spring.service.impl.BlogServiceImpl" />
 
 	<!-- dao -->
 	<bean id="userDetailsDao" class="com.jacobduchen.spring.dao.impl.UserDetailsDaoImpl" />
+	<bean id="blogDao" class="com.jacobduchen.spring.dao.impl.BlogDaoImpl" />
 
 </beans>
